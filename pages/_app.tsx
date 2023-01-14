@@ -4,10 +4,13 @@ import type {NextPage} from 'next'
 import { ReactElement, ReactNode } from 'react';
 
 //Para permitir utilizar diversos Layout en la app
+//Nombre de tipos recomendados NextPageWithLayout
 export type PaginaConLayout<P = {}, IP = P> = NextPage<P, IP> &{
   getLayout?: (page: ReactElement) => ReactNode
 }
 
+//Nombre recomendado AppPropsWothLaout
+//
 type AppPropsConLayout = AppProps & {
   Component: PaginaConLayout
 }
