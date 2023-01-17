@@ -11,7 +11,6 @@ const menuItems : {  text: string, href: string}[] = [
 export const NavBar = () => {
 
   return (
-    //Esta escrito en typescript or javascript puro ???
     <nav className={styles.menu_navbar}>
       {
         menuItems.map( ({text, href}) => (
@@ -21,16 +20,3 @@ export const NavBar = () => {
     </nav>
   )
 }
-/* all syntaxis typescript
-export const NavBar = () => {
-
-  return (
-    <nav className={styles.menu_navbar}>
-        <ActiveLink texto={menuItems[0].text} href={menuItems[0].href}  />
-        <ActiveLink texto={menuItems[1].text} href={menuItems[1].href} />
-        <ActiveLink texto={menuItems[2].text} href={menuItems[2].href} />
-        <ActiveLink texto={menuItems[3].text} href={menuItems[3].href} />
-    </nav>
-  )
-}
-*/
